@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="teste-css.css">
+</head>
+
+<body>
+    <div class="plano-de-fundo">
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="./img/video.mp4.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <img src="./img/folha.png" alt="logo" class="logo">
+        </nav>
+
+        <div class="conteudo">
+            <h1>Login</h1>
+            <form action="index.html" method="post">
+               <div class="container-sm">
+
+                       <div class="textfield">
+                           <label for="usuario">Usuário</label>
+                           <input type="text" class="form-control" name="n" id="login" placeholder="Usuário">
+                       </div>
+
+                       <div class="textfield2">
+                           <label for="senha">Senha</label>
+                           <div class="input-groups">
+                           <input type="password" class="form-control" name="s" id="s" placeholder="Senha">
+                           <button type="button" id="bt3" class="btn btn-secondary"  onclick="mostrarSenha()"><img class="img1" id="img1" src="./img/olho1.svg" ></img></button>
+                           </div>
+                       </div>
+
+
+                       <div id="div"></div><br>
+
+                       <button id="bt1" type="submit" name="submit" onclick="logar(); return false">Entrar</button><br><br>
+               </form>
+ 
+        </div>
+        <p>Mensagem enviada com sucesso.</p><p> Aguarde um email com usuário e senha.</p>
+    </div>
+
+
+    <script>
+
+
+    function openModal(){
+        const modal = document.getElementById('modal-container')
+        modal.classList.add('mostrar')
+
+        modal.addEventListener('click', (e) =>{
+            if (e.target.id == 'modal-container' || e.target.id == "fechar"){
+                modal.classList.remove('mostrar')
+                localStorage.fechaModal = 'modal-container'
+                location.href = "form-contato.html";
+            }
+        })
+    }
+
+     function logar() {
+         var login0 = document.getElementById('login').value;
+         var senha0 = document.getElementById('s').value;
+
+        var login =login0.toLowerCase();
+        var senha =senha0.toLowerCase();
+
+        console.log(login,senha);
+
+         if(login == "tech_sustentavel" && senha == "sustentabilidade"){
+            location.href = "https://alissoned.github.io/Tech-sustentavel/Menu/home.html";
+
+
+         } else if(login != "tech_sustentavel") {
+              alert('Usuario incorreto');
+              document.getElementById('login').value = '';
+              document.getElementById('s').value = '';
+              document.getElementById('login').autofocus = '';
+         }else{
+              alert('Senha incorreta');
+              document.getElementById('login').value = '';
+              document.getElementById('s').value = '';
+              document.getElementById('s').autofocus = '';
+         }
+     }
+
+     function senha() {
+        if (document.getElementById("div").style.display == "none") {
+        document.getElementById("div").style.display = "block";
+     }else{
+        document.getElementById("div").style.display = "none";
+     }
+    }
+
+     </script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

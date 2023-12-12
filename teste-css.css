@@ -1,0 +1,391 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial;
+
+ }
+
+ .plano-de-fundo {
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     padding: 0 5%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: rgba(17, 17, 17, 0.75);
+ }
+
+ nav {
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     padding: 20px 8%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-bottom: 0;
+ }
+
+ nav .logo {
+     width: 140px;
+     height: auto;
+ }
+
+ nav ul li {
+     list-style: none;
+     display: inline-block;
+     margin-left: 40px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+
+ }
+
+ nav ul li a {
+     text-decoration: none;
+     color: #ffffff;
+     font-size: 17px;
+ }
+
+ .conteudo {
+    position: relative;
+     text-align: center;
+ }
+
+ .conteudo h1 {
+     font-size: 120px;
+     color: #ccffbc;
+     font-weight: 600;
+     transition: 0.5s;
+     margin-bottom: 60px;
+ }
+
+ .conteudo h1:hover {
+     -webkit-text-stroke: 4px #e2ffad;
+     color: transparent;
+ }
+
+ .conteudo a {
+     text-decoration: none;
+     display: inline-block;
+     color: beige;
+     font-size: 24px;
+     border: 2px solid #fff;
+     padding: 14px 70px;
+     border-radius: 50px;
+     margin-top: 20px;
+
+ }
+
+ .back-video {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+ }
+
+ @media (min-aspect-radio: 16/9) {
+     .back-video {
+         width: 100%;
+         height: auto;
+     }
+ }
+
+ @media (max-aspect-radio:16/9) {
+     .back-video {
+         width: auto;
+         height: 100%;
+     }
+ }
+
+
+
+ .textfield{
+     color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+     margin-bottom: 40px;
+     padding-left: 50px;
+ }
+
+
+
+ .textfield input {
+     border-radius: 20px;
+     padding: 10px 10px 10px 10px;
+     color: white;
+     background: rgba(255, 255, 255, 0.3);
+     border-style: none;
+}
+
+ .textfield input::placeholder {
+     color: white;
+ }
+
+ .textfield label {
+     margin-bottom: 10px;
+ }
+
+ .textfield2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+
+
+.textfield2 input {
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    border-style: none;
+}
+
+.textfield2 input::placeholder {
+    color: white;
+}
+
+.textfield2 label {
+    margin-bottom: 10px;
+}
+
+ #bt1{
+     width: 40%;
+     height: 40px;
+     border-radius: 20px;
+     border-style: none;
+     background-color: #ccffbc;
+     font-weight: bold;
+     font-size: 20px;
+ }
+
+#bt1:hover {
+    cursor: pointer;
+}
+
+ .input-groups{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ #s {
+     border-radius: 30px 0 0 30px;
+ }
+
+ #login{
+     width: 82%;
+ }
+
+ #bt3{
+     width: 40px;
+     height: 35px;
+     padding-right: 2px;
+     padding-top: 2px;
+     border-radius: 0 30px 30px 0;
+     border-style: none;
+ }
+
+#bt3:hover {
+    cursor: pointer;
+}
+
+ #img1{
+     width: 20px;
+     height: 30px;
+ }
+
+.pass {
+    display: flex;
+    width: 200px;
+    height: 130px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: start;
+    display: none;
+    color: white;
+    background-color: rgba(2, 55, 99, 0.767);
+    margin-bottom: 70px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.pass label {
+    font-size: 14px;
+}
+
+.pass input {
+    height: 20px;
+    border-radius: 10px;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.pass button {
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 4px;
+    border: none;
+    background-color: #ccffbc;
+}
+
+.pass button:hover {
+    cursor: pointer;
+}
+
+#bt2 {
+    padding: 4px;
+    background-color: rgb(0, 141, 160);
+    border-radius: 15px;
+    border: none;
+}
+
+#bt2:hover {
+    cursor: pointer;
+}
+
+p {
+    color: white;
+}
+
+@keyframes animate-modal {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.dropdown {
+    padding-top: 20px;
+    position: relative;
+    align-self: center;
+    justify-self: end;
+    display: none;
+  }
+
+  .dropdown-content {
+    display: none;
+    color: white;
+    position: absolute;
+    right: 0;
+    background-color: #000000da;
+    min-width: 260px;
+    min-height: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 15px;
+ 
+  }
+
+  .dropdown-content .f1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dropdown-content input {
+    height: 20px;
+    border-radius: 10px;
+    padding: 4px;
+    margin-top: 10px;
+  }
+
+  .dropdown-content button {
+    border-radius: 10px;
+    padding: 6px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+ @media only screen and (max-width: 950px){
+     .card-login{
+         width: 85%;
+     }
+ }
+
+ @media only screen and (max-width: 600px){
+     .main-login{
+         flex-direction: column;
+         height: 100vh;
+     }
+     .esquerda-login > h1{
+         display: none;
+     }
+     .esquerda-login{
+         width: 100%;
+         height: 25%;
+     }
+     .direita-login{
+         width: 100%;
+         height: 75%;
+     }
+     .direita-login h2{
+         margin-bottom: 30px;
+     }
+     .back{
+         visibility: visible;
+         margin-top: 5px;
+         width: 30px;
+     }
+     .textfield{
+         margin-bottom: 0;
+     }
+     .img-login{
+         height: 100%;
+         width: auto;
+     }
+ }
+
+ @media only screen and (max-width: 400px){
+    .conteudo h1 {
+        font-size: 80px;
+    }
+    #s {
+        width: 65%;
+    }
+    .input-groups {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .textfield2 {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-height: 910px){
+
+    .pass{
+        z-index: -2;
+    }
+    #bt2 {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+      }
+
+
+}

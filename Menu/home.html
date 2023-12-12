@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+    <script src="https://kit.fontawesome.com/bce3b9a26e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../projeto/fotos/folha.png" />
+  </head>
+  <body>
+
+    <header>
+      <a  class="logo"><nav>
+        <img src="./fotos/folha.png" alt="logo" class="logo">
+    </nav></a>
+
+
+
+      <div class="navigation">
+        <ul class="menu">
+
+
+          <div class="dropdown">
+            <span><i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>  </span>
+            <div class="dropdown-content">
+              <a href="https://alissoned.github.io/Tech-sustentavel/Energia/energia-tec.html">Energias Renováveis</a><br>
+              <a href="https://alissoned.github.io/Tech-sustentavel/Reciclagem e tecnologia/reciclagem.html">Reciclagem-e-Tecnologia</a><br>
+              <a href="https://alissoned.github.io/Tech-sustentavel/Economia-Cirular/Responsive Website/economia.html">Economia-Circular</a><br>
+              <a href="https://alissoned.github.io/Tech-sustentavel/Form-contato/form-contato.html">Contate-nos</a><br>
+            </div>
+          </div>
+
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="https://alissoned.github.io/Tech-sustentavel/Energia/energia-tec.html">Energias Renováveis</a></li>
+
+            <li class="menu-item">
+            <a class="sub-btn" href="https://alissoned.github.io/Tech-sustentavel/Reciclagem e tecnologia/reciclagem.html">Reciclagem e Tecnologia</a>
+            <ul class="sub-menu">
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-item"><a href="https://alissoned.github.io/Tech-sustentavel/Economia-Cirular/Responsive Website/economia.html">Economia Circular</a></li>
+          <li class="menu-item"><a href="https://alissoned.github.io/Tech-sustentavel/Form-contato/form-contato.html">Contate-nos</a></li>
+
+
+
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="section-home">
+      <h1>Tech Sustentável</h1>
+    </section>
+
+
+    <script type="text/javascript">
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+      //toggle sub-menus
+      $(".sub-btn").click(function(){
+        $(this).next(".sub-menu").slideToggle();
+      });
+
+      //toggle more-menus
+      $(".more-btn").click(function(){
+        $(this).next(".more-menu").slideToggle();
+      });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    </script>
+
+  </body>
+</html>

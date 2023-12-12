@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="teste-css.css">
+    <script src="https://kit.fontawesome.com/bce3b9a26e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="plano-de-fundo">
+
+
+
+
+        <div id="div" class="pass">
+
+            <form class="f1" action="https://formsubmit.co/9eac7412918633e7eb367e2d43e86aba" method="post">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://alissoned.github.io/Tech-sustentavel/enviado.html">
+
+
+                <label for="msg">Por favor adicione um email para o qual a senha será enviada.</label>
+                <input type="email" name="email" placeholder="Email">
+                <button class="send" type="submit">Enviar</button>
+            </form>
+
+       </div>
+
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="./img/video.mp4.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <img src="./img/folha.png" alt="logo" class="logo">
+
+            <div class="dropdown">
+                <span><i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>  </span>
+                <div class="dropdown-content">
+                        <form class="f1" action="https://formsubmit.co/9eac7412918633e7eb367e2d43e86aba" method="post">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://alissoned.github.io/Tech-sustentavel/enviado.html">
+
+                            <label for="msg">Por favor adicione um email para o qual a senha será enviada.</label>
+                            <input type="email" name="email" placeholder="Email">
+                            <button class="send" type="submit">Enviar</button>
+                        </form>
+
+                </div>
+              </div>
+        </nav>
+
+        <div class="conteudo">
+            <h1>Login</h1>
+            <form class="f2" action="index.html" method="post">
+               <div class="container-sm">
+
+                       <div class="textfield">
+                           <label for="usuario">Usuário</label>
+                           <input type="text" class="form-control" name="n" id="login" placeholder="Usuário">
+                       </div>
+
+                       <div class="textfield">
+                           <label for="senha">Senha</label>
+                           <div class="input-groups">
+                           <input type="password" class="form-control" name="s" id="s" placeholder="Senha">
+                           <button type="button" id="bt3" class="btn btn-secondary"  onclick="mostrarSenha()"><img class="img1" id="img1" src="./img/olho1.svg" ></img></button>
+                           </div>
+                       </div>
+
+
+                       <div id="div"></div><br>
+
+                       <button id="bt1" type="submit" name="submit" onclick="logar(); return false">Entrar</button><br><br>
+               </form>
+
+        </div>
+        <button type="menu" id="bt2" onclick="senha()">Solicitar dados</button>
+    </div>
+
+
+
+
+    <script>
+
+     function logar() {
+         var login0 = document.getElementById('login').value;
+         var senha0 = document.getElementById('s').value;
+
+        var login =login0.toLowerCase();
+        var senha =senha0.toLowerCase();
+
+        console.log(login,senha);
+
+         if(login == "tech_sustentavel" && senha == "sustentabilidade"){
+            location.href = "https://alissoned.github.io/Tech-sustentavel/Menu/home.html";
+
+
+         } else if(login != "tech_sustentavel") {
+              alert('Usuario incorreto');
+              document.getElementById('login').value = '';
+              document.getElementById('s').value = '';
+              document.getElementById('login').autofocus = '';
+         }else{
+              alert('Senha incorreta');
+              document.getElementById('login').value = '';
+              document.getElementById('s').value = '';
+              document.getElementById('s').autofocus = '';
+         }
+     }
+
+     function senha() {
+        if (document.getElementById("div").style.display == "none") {
+        document.getElementById("div").style.display = "block";
+     }else{
+        document.getElementById("div").style.display = "none";
+     }
+    }
+
+     </script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
